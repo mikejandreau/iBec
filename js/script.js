@@ -24,26 +24,20 @@ var contentToggler = document.querySelector('.open_card__content');
 var cardContent = document.querySelector('.card__content');
 
 // Set initial WAI-ARIA values for content section and toggle button
-if (window.innerWidth > 1200) {
-    // Do nothin'
+contentToggler.setAttribute( 'aria-expanded', 'false' );
+cardContent.setAttribute( 'aria-expanded', 'false' );
 
-} else {
+// Toggle content and set WAI-ARIA values when chevron is clicked
+contentToggler.onclick = function() {
+  if (hasClass(cardContent, 'card_open')) {
+    removeClass(contentToggler, 'card_open'); 
+    removeClass(cardContent, 'card_open');
     contentToggler.setAttribute( 'aria-expanded', 'false' );
     cardContent.setAttribute( 'aria-expanded', 'false' );
-
-    // Toggle content and set WAI-ARIA values when chevron is clicked
-    contentToggler.onclick = function() {
-        if (hasClass(cardContent, 'card_open')) {
-            removeClass(contentToggler, 'card_open'); 
-            removeClass(cardContent, 'card_open');
-            contentToggler.setAttribute( 'aria-expanded', 'false' );
-            cardContent.setAttribute( 'aria-expanded', 'false' );
-        } else {
-            addClass(contentToggler, 'card_open'); 
-            addClass(cardContent, 'card_open');
-            contentToggler.setAttribute( 'aria-expanded', 'true' );
-            cardContent.setAttribute( 'aria-expanded', 'true' );
-        }
-    };
-}
-
+  } else {
+    addClass(contentToggler, 'card_open'); 
+    addClass(cardContent, 'card_open');
+    contentToggler.setAttribute( 'aria-expanded', 'true' );
+    cardContent.setAttribute( 'aria-expanded', 'true' );
+  }
+};
