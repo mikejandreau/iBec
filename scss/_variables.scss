@@ -1,0 +1,62 @@
+// Colors
+$blue: #151F38;
+$pink: #f0485d;
+$tan: #84764e;
+$white: #fff;
+$pulses: rgba(240, 72, 93, .5);
+$button_bg: rgba(21,34,64,.2);
+$button_border: rgba(255,255,255,.2);
+
+// Transition duration for hover/toggle effects
+$transition_duration: 0.3s;
+
+// Chevron toggle, size is calculated using the formula d = a * √2
+$chevronWidth: 14px; // width of chevron, can be whatever
+$borderWidth: 2px; // width of borders based on chevron size
+$squareRoot: 1.41421356237; // square root of 2 used for getting chevron diagonal width
+$chevronDiagonal: $chevronWidth * $squareRoot; // calculates diagonal of chevron
+
+// Drop shadow color and size
+$shadow-outer: rgba(0,0,0,0.3);
+$shadow-size: 60px;
+
+// Responsive breakpoints for mixins
+$width_tablet: 800px;
+$width_desktop: 1200px;
+
+// Duration of the animated pulsing border
+$pulseTiming: 4s;
+
+
+// MIXINS
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Media queries
+// @include mobile { selector: style; }
+@mixin tablet   { @media (min-width: #{$width_tablet})  { @content; } }
+@mixin desktop   { @media (min-width: #{$width_desktop})  { @content; } }
+
+// Outer box shadow
+// @include dropShadow;
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+@mixin dropShadow() {
+    box-shadow: 0 0 $shadow-size 0 $shadow-outer, 0 0 $shadow-size 0 $shadow-outer;
+}
+
+
+// KEYFRAMES
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+@-webkit-keyframes pulsingBorder {
+  0% {
+    transform: scale(.8); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(1.2); 
+    opacity: .8; 
+  }
+  100% { 
+    transform: scale(1.6); 
+    opacity: 0; 
+  }
+}
