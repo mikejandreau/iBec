@@ -1,6 +1,10 @@
+
+// LAYOUT
+//––––––––––––––––––––––––––––––––––––––––––––––––––
 .container {
   padding: 30px;
 }
+
 
 .card {
   background: $blue;
@@ -43,6 +47,7 @@
   position: relative;
   z-index: 1;
   display: inline-block;
+  width: 90%;
   max-width: 300px;
   margin: 60px 0 30px;
   border-radius: 50%;
@@ -92,7 +97,11 @@
 }
 
 .card__content__wrap {
-  padding: 0 60px;
+  padding: 0 30px;
+  
+  @include phablet {
+    padding: 0 60px;
+  }
 
   @include desktop {
     display: flex;
@@ -111,7 +120,7 @@
   text-align: left;
   
   &.card_open {
-    max-height: 700px;
+    max-height: 800px;
   }
   
   @include desktop {
@@ -132,25 +141,25 @@
     background: $button_bg;
     border: 1px solid $button_border;
     border-radius: 30px;
-  font-size: 18px;
-  padding: 0 12px;
+    padding: 18px 12px;
+    font-size: 18px;
     margin: 0 5px 10px;
-    line-height: 56px;
+    line-height: 1.1;
     text-align: center;
     color: $white;
     text-decoration: none;
     transition: $transition_duration;
     
-    
-
-
-
     &:hover {
       border-color: $white;
     }
     
+    @include tablet {
+      font-size: 20px;
+    }
+    
     @include desktop {
-      padding: 0 30px;
+      padding: 18px 30px;
     }
   }
 }
@@ -172,9 +181,9 @@
     visibility: hidden;
   }
   
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
   
   &.card_open {
     transform: rotate(-180deg);
@@ -182,30 +191,30 @@
 }
 
 .down_chevron {
-	display: inline-block;
-	box-sizing: border-box;
-	text-align: center;
-	cursor: pointer;
-	padding: 0;
-	color: $pink;
-	right: $chevronWidth;
-	bottom: $chevronWidth * 6;
-	line-height: $chevronDiagonal * ($squareRoot * 2);
-	width: $chevronDiagonal * ($squareRoot * 2);
-	height: $chevronDiagonal * ($squareRoot * 2);
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  color: $pink;
+  right: $chevronWidth;
+  bottom: $chevronWidth * 6;
+  line-height: $chevronDiagonal * ($squareRoot * 2);
+  width: $chevronDiagonal * ($squareRoot * 2);
+  height: $chevronDiagonal * ($squareRoot * 2);
   
-	// chevron border (the actual arrow bit)
-	&:before {
-		display: inline-block;
-		box-sizing: border-box;
-		border-style: solid;
-		content: '';
-		position: relative;
-		transform: rotate(135deg);
-		vertical-align: top;   
-		border-width: $borderWidth $borderWidth 0 0;
-		height: $chevronWidth * 1.8;
-		width: $chevronWidth * 1.8;
-		top: $chevronWidth * .6; 
-	}
+  // chevron border (the actual arrow bit)
+  &:before {
+    display: inline-block;
+    box-sizing: border-box;
+    border-style: solid;
+    content: '';
+    position: relative;
+    transform: rotate(135deg);
+    vertical-align: top;   
+    border-width: $borderWidth $borderWidth 0 0;
+    height: $chevronWidth * 1.8;
+    width: $chevronWidth * 1.8;
+    top: $chevronWidth * .6; 
+  }
 }

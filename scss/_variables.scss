@@ -21,6 +21,7 @@ $shadow-outer: rgba(0,0,0,0.3);
 $shadow-size: 60px;
 
 // Responsive breakpoints for mixins
+$width_phablet: 600px;
 $width_tablet: 800px;
 $width_desktop: 1000px;
 
@@ -33,6 +34,7 @@ $pulseTiming: 4s;
 
 // Media queries
 // @include mobile { selector: style; }
+@mixin phablet   { @media (min-width: #{$width_phablet})  { @content; } }
 @mixin tablet   { @media (min-width: #{$width_tablet})  { @content; } }
 @mixin desktop   { @media (min-width: #{$width_desktop})  { @content; } }
 
@@ -60,3 +62,4 @@ $pulseTiming: 4s;
     opacity: 0; 
   }
 }
+
