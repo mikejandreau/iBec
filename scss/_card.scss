@@ -132,7 +132,8 @@
     background: $button_bg;
     border: 1px solid $button_border;
     border-radius: 30px;
-    padding: 0 20px;
+  font-size: 18px;
+  padding: 0 12px;
     margin: 0 5px 10px;
     line-height: 56px;
     text-align: center;
@@ -140,6 +141,10 @@
     text-decoration: none;
     transition: $transition_duration;
     
+    
+
+
+
     &:hover {
       border-color: $white;
     }
