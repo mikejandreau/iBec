@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Museo-700';
+  src: url("../fonts/38FA35_0_0.eot");
+  src: url("../fonts/38FA35_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/38FA35_0_0.woff2") format("woff2"), url("../fonts/38FA35_0_0.woff") format("woff"), url("../fonts/38FA35_0_0.ttf") format("truetype"); 
+}
+
 @-webkit-keyframes pulsingBorder {
   0% {
     transform: scale(0.8);
@@ -12,6 +18,7 @@
     opacity: 0;
   }
 }
+
 * {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
