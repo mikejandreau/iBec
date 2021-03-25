@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>iBec Test Project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700i" rel="stylesheet">
-  </head>
-  <body>
-<div class="container">
+<head>
+  <title>iBec Test Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700i" rel="stylesheet">
+  <style type="text/css">@-webkit-keyframes pulsingBorder{0%{transform:scale(0.8);opacity:0}50%{transform:scale(1.2);opacity:0.8}100%{transform:scale(1.6);opacity:0}}*{font-family:"Source Sans Pro",sans-serif;margin:0;padding:0}body{background:#f0485d;font-size:20px;line-height:1.2}h1,h2{font-family:"Museo-700",sans-serif;line-height:1.2;margin:0 0 10px}p{margin-bottom:30px}strong{font-weight:700}a{color:#d9d9d9}.container{padding:30px}.card{background:#151F38;color:white;margin:0 auto;text-align:center;border-radius:30px;max-width:420px;overflow:hidden;box-shadow:0 0 60px 0 rgba(0,0,0,0.3),0 0 60px 0 rgba(0,0,0,0.3)}@media (min-width:1200px){.card{max-width:990px;display:flex;padding:60px 0}}.card__header{position:relative;z-index:2;text-align:center}.card__header h1{color:#fff;font-size:36px}.card__header h2{color:#84764e;font-size:20px}@media (min-width:1200px){.card__header{text-align:left}}.card__img__wrap{position:relative;z-index:1;display:inline-block;width:90%;max-width:300px;margin:60px 0 30px;border-radius:50%;box-shadow:0 0 60px 0 rgba(0,0,0,0.3),0 0 60px 0 rgba(0,0,0,0.3)}@media (min-width:1200px){.card__img__wrap{margin:60px 0 60px 60px;display:flex;flex-direction:column;justify-content:center}}.card__img{position:relative;z-index:2;display:block;width:100%;height:auto;border-radius:50%;overflow:hidden}.pulse{border-radius:50%;display:block;position:absolute;border:1px solid #f0485d;padding:0;width:300px;height:300px;top:0;left:0;-webkit-animation:pulsingBorder 4s linear infinite;animation:pulsingBorder 4s linear infinite}.pulse:first-of-type{-webkit-animation-delay:-4s;animation-delay:-4s}.pulse:nth-child(2){-webkit-animation-delay:-2.6666666667s;animation-delay:-2.6666666667s}.pulse:nth-child(3){-webkit-animation-delay:-1.3333333333s;animation-delay:-1.3333333333s}.card__content__wrap{padding:0 30px}@media (min-width:500px){.card__content__wrap{padding:0 60px}}@media (min-width:1200px){.card__content__wrap{display:flex;flex-direction:column;justify-content:center;flex:2;text-align:left}}.card__content{max-height:0;overflow:hidden;text-align:left}@media (min-width:1200px){.card__content{max-height:500px}}@media (min-width:1200px){.card__footer{display:flex}}.card__footer a{display:flex;flex-direction:column;justify-content:center;flex:1;background:rgba(21,34,64,0.2);border:1px solid rgba(255,255,255,0.2);border-radius:30px;padding:18px 12px;font-size:18px;margin:0 5px 10px;line-height:1.1;text-align:center;color:#fff;text-decoration:none}@media (min-width:800px){.card__footer a{font-size:20px}}@media (min-width:1200px){.card__footer a{padding:18px 30px}}.call_email_links{display:flex}.open_card__content{background:transparent!important;box-shadow:none!important;border:none!important}@media (min-width:1200px){.open_card__content{display:none;visibility:hidden}}.down_chevron{display:inline-block;box-sizing:border-box;text-align:center;padding:0;color:#f0485d;right:14px;bottom:84px;line-height:55.9999999998px;width:55.9999999998px;height:55.9999999998px}.down_chevron:before{display:inline-block;box-sizing:border-box;border-style:solid;content:"";position:relative;transform:rotate(135deg);vertical-align:top;border-width:2px 2px 0 0;height:25.2px;width:25.2px;top:8.4px}</style>
+</head>
+<body>
+  <div class="container">
 
-  <div class="card">
+    <div class="card">
 
-    <div class="card__img__wrap">
+      <div class="card__img__wrap">
         <img class="card__img" src="img/homefries-out-of-potatoes.jpg" alt="I'm making homefries" />
-      <span class="pulse"></span>
-      <span class="pulse"></span>
-      <span class="pulse"></span>
-    </div>
-
-    <div class="card__content__wrap">
-
-      <header class="card__header">
-        <h1 class="card__title">Mike Jandreau</h1>
-        <h2 class="card__subtitle">Useful Stuff Doer</h2>
-      </header>
-
-      <div class="card__content">
-
-        <p>Mike is a graphic designer, web developer, and musician from northern Maine. In his spare time he likes to <a href="https://www.youtube.com/watch?v=c5T8HjklJFo" target="_blank">play guitar</a>, read sci-fi books, and draw <a href="https://www.deviantart.com/wickedoffkiltah/art/2012-09-18-Abacus-Virus-328136563" target="_blank"> stupid comics</a>. He lives in Bangor with his wife, young son, and a cat with a trust fund. Not a huge trust fund, but there is an executor involved. It's a long story.</p>
-        <p><strong><em>“You can build anything, but there ain't nothing you can't break”</em></strong></p>
-
-        <footer class="card__footer">
-          <div class="call_email_links">
-            <a href="tel:571-286-8124">Call</a>
-            <a href="mailto:mikejandreau@gmail.com">Email</a>
-          </div>
-          <div class="resume_download_link">
-            <a href="pdf/Michael-Jandreau-2021-resume.pdf?dl=0" download>Download Mike's Resumé</a>
-          </div>
-        </footer>
-
+        <span class="pulse"></span>
+        <span class="pulse"></span>
+        <span class="pulse"></span>
       </div>
 
-    </div>
-    
-  <button class="open_card__content"><span class="down_chevron"></span></button>
-    
-  </div><!-- End .card -->
+      <div class="card__content__wrap">
 
-</div> <!-- End .container -->
-  </body>
+        <header class="card__header">
+          <h1 class="card__title">Mike Jandreau</h1>
+          <h2 class="card__subtitle">Useful Stuff Doer</h2>
+        </header>
 
-<script async src="js/script.js"></script>
+        <div class="card__content">
+          <p>Mike is a graphic designer, web developer, and musician from northern Maine. In his spare time he likes to <a href="https://www.youtube.com/watch?v=c5T8HjklJFo" target="_blank">play guitar</a>, read sci-fi books, and draw <a href="https://www.deviantart.com/wickedoffkiltah/art/2012-09-18-Abacus-Virus-328136563" target="_blank"> stupid comics</a>. He lives in Bangor with his wife, young son, and a cat with a trust fund. Not a huge trust fund, but there is an executor involved. It's a long story.</p>
+          <p><strong><em>“You can build anything, but there ain't nothing you can't break”</em></strong></p>
+          <footer class="card__footer">
+            <div class="call_email_links">
+              <a href="tel:571-286-8124">Call</a>
+              <a href="mailto:mikejandreau@gmail.com">Email</a>
+            </div>
+            <div class="resume_download_link">
+              <a href="pdf/Michael-Jandreau-2021-resume.pdf?dl=0" download>Download Mike's Resumé</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+
+      <button class="open_card__content"><span class="down_chevron"></span></button>
+
+    </div><!-- End .card -->
+
+  </div> <!-- End .container -->
+</body>
+
+<noscript id="deferred-styles">
+  <link href="css/styles.min.css" rel="stylesheet">
+</noscript>
+
+<script>
+  var loadDeferredStyles = function() {
+    var addStylesNode = document.getElementById("deferred-styles");
+    var replacement = document.createElement("div");
+    replacement.innerHTML = addStylesNode.textContent;
+    document.body.appendChild(replacement)
+    addStylesNode.parentElement.removeChild(addStylesNode);
+  };
+  var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+  else window.addEventListener('load', loadDeferredStyles);
+</script>
+
+<script async src="js/script.min.js"></script>
+
 </html>
